@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Soccer Analytics</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>
+            <select name="myList" id="ddlMyList">
+                <option value="simulation.html">Simulation</option>
+                <option value="http://home.ifi.uio.no/paalh/dataset/alfheim/">Tromso Data</option>
+            </select>
+            <input type="button" value="Go To Site!" onclick="NavigateToSite()" />
+            <script>
+                function NavigateToSite() {
+                    var ddl = document.getElementById("ddlMyList");
+                    var selectedVal = ddl.options[ddl.selectedIndex].value;
+
+                    window.location = selectedVal;
+                }
+            </script>
+        </div>
+    </body>
+</html>
